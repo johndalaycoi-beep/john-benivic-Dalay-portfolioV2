@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PCU Enrollment Form — Project</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #091322 0%, #0b1226 100%);
+            color: #e6eef8;
+            min-height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:40px 20px;
+        }
+        .card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+            max-width: 760px;
+            width:100%;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(2,6,12,0.7);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        h2 {
+            text-align: center;
+            color: var(--riot-red, #ff4655);
+            margin-bottom: 18px;
+            font-weight: 700;
+            font-size:22px;
+        }
+        .form-row { display:flex; gap:12px; }
+        .col { flex:1; }
+        label { display:block; font-weight:600; margin-bottom:6px; color:#cbd7e6; font-size:14px; }
+        input[type="text"], input[type="email"], input[type="number"], textarea {
+            width:100%; padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:#eaf2ff;
+        }
+        input:focus, textarea:focus { outline:none; box-shadow:0 6px 20px rgba(255,70,85,0.06); border-color:rgba(255,70,85,0.18); }
+        .radio-group { display:flex; gap:18px; margin-top:8px; }
+        input[type="radio"] { transform:scale(1.1); margin-right:6px; accent-color:#ff4655; }
+        .buttons { text-align:center; margin-top:20px; }
+        button { padding:10px 18px; border-radius:8px; border:none; cursor:pointer; font-weight:700; }
+        .btn-primary { background:#ff4655; color:#08030a; margin-right:12px; }
+        .btn-reset { background:#1f2a3a; color:#e6eef8; border:1px solid rgba(255,255,255,0.04); }
+        @media (max-width:700px) { .form-row { flex-direction:column; } }
+        .meta { color:#9aa6b2; font-size:13px; text-align:center; margin-top:10px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>PCU Enrollment Form</h2>
+        <form id="enrollForm" action="#" method="post" onsubmit="return handleSubmit(event)">
+            <div class="form-row">
+                <div class="col">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+                </div>
+                <div class="col">
+                    <label for="studentid">Student ID:</label>
+                    <input type="text" id="studentid" name="studentid" placeholder="Enter your student ID" required />
+                </div>
+            </div>
+
+            <div style="height:12px"></div>
+
+            <div class="form-row">
+                <div class="col">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+                <div class="col">
+                    <label for="contact">Contact Number:</label>
+                    <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required />
+                </div>
+            </div>
+
+            <div style="height:12px"></div>
+
+            <div class="form-row">
+                <div class="col">
+                    <label for="course">Course Applying For:</label>
+                    <input type="text" id="course" name="course" placeholder="Enter course name" required />
+                </div>
+                <div class="col">
+                    <label>Year Level:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="yearlevel" value="1st Year" required /> 1st Year</label>
+                        <label><input type="radio" name="yearlevel" value="2nd Year" /> 2nd Year</label>
+                        <label><input type="radio" name="yearlevel" value="3rd Year" /> 3rd Year</label>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height:12px"></div>
+
+            <div>
+                <label for="message">Additional Notes</label>
+                <textarea id="message" name="message" rows="4" placeholder="Any additional info..."></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="btn-primary">Submit</button>
+                <button type="reset" class="btn-reset">Reset</button>
+            </div>
+            <div class="meta">This is a static demo form. Submissions are handled via JavaScript for demo purposes.</div>
+        </form>
+    </div>
+
+    <script>
+        function handleSubmit(e){
+            e.preventDefault();
+            const data = Object.fromEntries(new FormData(e.target).entries());
+            alert("Form submitted (demo)\\nName: " + data.fullname + "\\nStudent ID: " + data.studentid + "\\nEmail: " + data.email);
+            return false;
+        }
+    </script>
+</body>
+</html>

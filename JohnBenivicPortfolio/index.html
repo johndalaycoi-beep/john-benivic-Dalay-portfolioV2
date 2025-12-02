@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>John Benivic D. Dalay — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --riot-red:#ff4655; --muted:#9aa6b2; }
+    body { font-family: Inter, sans-serif; background:#02060b; color:#e6eef8; margin:0; }
+    .container{ max-width:1100px; margin:0 auto; padding:24px; }
+    header{ border-bottom:1px solid rgba(255,255,255,0.04); background:rgba(6,9,15,0.6); backdrop-filter:blur(6px); }
+    .logo{ display:flex; gap:12px; align-items:center; }
+    .riot-btn{ background:var(--riot-red); padding:.6rem 1.2rem; font-weight:800; color:#08030a; clip-path: polygon(0 0, 92% 0, 100% 22%, 100% 100%, 8% 100%, 0 78%); text-decoration:none; display:inline-block; }
+    .chip{ background:#0b1118; padding:6px 10px; border-radius:999px; font-weight:600; border:1px solid rgba(255,255,255,0.03); color:var(--muted); }
+    .riot-card{ background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); padding:18px; border-radius:12px; transition:transform .18s ease, border-color .18s ease;}
+    .riot-card:hover{ transform: translateY(-6px); border-color: var(--riot-red); }
+    h1,h2,h3{ margin:0; }
+    .grid-3{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+    footer{ border-top:1px solid rgba(255,255,255,0.04); color:#9aa6b2; padding:18px 0; margin-top:36px; }
+    a { color:inherit; }
+    /* simple responsive */
+    @media (max-width:800px){ .layout{ flex-direction:column; } .aside{ width:100% } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;">
+      <div class="logo">
+        <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(45deg,#ff6b6b,#ff4655);display:flex;align-items:center;justify-content:center;font-weight:900;color:#000;">JD</div>
+        <div>
+          <div style="font-weight:900;">JOHN BENIVIC D. DALAY</div>
+          <div style="font-size:12px;color:var(--muted)">BSIT-3C • Front-end • UI</div>
+        </div>
+      </div>
+      <nav style="display:flex;gap:12px;align-items:center;">
+        <a class="chip" href="#work">WORK</a>
+        <a class="chip" href="#about">ABOUT</a>
+        <a class="chip" href="pcu-enrollment.html">PCU Enrollment</a>
+        <a class="chip" href="birth-calendar.html">Birth Calendar</a>
+        <a class="riot-btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:28px;">
+    <section style="display:flex;gap:24px;align-items:flex-start;" class="layout">
+      <div style="flex:1;">
+        <p style="text-transform:uppercase;color:var(--muted);font-size:13px;font-weight:700;">Hello, I'm</p>
+        <h1 style="font-size:40px;color:#fff;font-weight:900;margin-top:6px;">JOHN BENIVIC D. DALAY</h1>
+<img src="profile.jpg" alt="Profile Photo" style="width:160px;border-radius:12px;margin-top:18px;">
+        <p style="color:#cbd7e6;max-width:640px;margin-top:12px;">I design and build bold, tactical user interfaces and student-focused web applications. My work combines modern UI patterns, accessibility, and performance-aware front-end development.</p>
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center;">
+          <a href="#work" class="riot-btn">View Work</a>
+          <a href="#contact" class="chip">Say Hello</a>
+        </div>
+
+        <div style="margin-top:22px;">
+          <h3 style="font-weight:800;">About</h3>
+          <p style="color:#cbd7e6;margin-top:8px;max-width:800px;">
+            Hi! I’m <strong>John Benivic D. Dalay</strong>, a BSIT-3C student passionate about creating functional, clean, and visually engaging digital experiences. I enjoy learning new technologies, building useful interfaces, and crafting polished user interactions. I’m adaptable, a fast learner, and able to multitask in dynamic environments.
+          </p>
+        </div>
+
+        <div style="margin-top:18px;">
+          <h3 style="font-weight:800;">Skills</h3>
+          <ul style="color:#cbd7e6;margin-top:8px;list-style:none;padding:0;display:flex;gap:8px;flex-wrap:wrap;">
+            <li class="chip">Programming</li>
+            <li class="chip">Fast Learner</li>
+            <li class="chip">Adaptable</li>
+            <li class="chip">Multitasking</li>
+            <li class="chip">HTML/CSS/JS</li>
+            <li class="chip">UI Layout</li>
+            <li class="chip">Problem Solving</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:18px;">
+          <h3 style="font-weight:800;">Achievements</h3>
+          <ul style="color:#cbd7e6;margin-top:8px;">
+            <li>Completed multiple web-based projects using HTML, CSS, and JavaScript.</li>
+            <li>Built a functional PCU Enrollment Form as a demo project.</li>
+            <li>Designed a themed personal portfolio following Riot-inspired aesthetics.</li>
+            <li>Continuously improving coding and design skills.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="aside" style="width:320px;">
+        <div class="riot-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div style="font-weight:800;">Contact</div>
+            <div style="font-size:18px;">✉️</div>
+          </div>
+          <div style="color:var(--muted);margin-top:8px;">
+            <div><strong>Email:</strong> Johndalay25@gmail.com</div>
+            <div><strong>Phone:</strong> 0961 061 5582</div>
+            <div><strong>Section:</strong> BSIT-3C</div>
+          </div>
+        </div>
+
+        <div class="riot-card" style="margin-top:12px;">
+          <div style="font-weight:800;">Featured</div>
+          <div style="color:var(--muted);margin-top:8px;">
+            <div>PCU Enrollment — Responsive form</div>
+            <div>Birth Calendar — Creative demo</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="work" style="margin-top:36px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
+        <h2 style="font-size:22px;font-weight:900;">Selected Work</h2>
+        <div style="color:var(--muted);">Showing 3 projects</div>
+      </div>
+
+      <div style="margin-top:16px;" class="grid-3">
+        <div class="riot-card">
+          <div style="font-weight:900;">PCU Enrollment Form</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px;">HTML • CSS • JavaScript</div>
+          <p style="margin-top:8px;color:#cbd7e6;">A responsive, styled enrollment form with demo submission handling. Click to open full project page.</p>
+          <div style="margin-top:12px;"><a href="pcu-enrollment.html" class="riot-btn">View Project</a></div>
+        </div>
+
+        <div class="riot-card">
+          <div style="font-weight:900;">September 2004 — Birth Calendar</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px;">HTML • CSS</div>
+          <p style="margin-top:8px;color:#cbd7e6;">A colorful, responsive calendar that highlights a specific birthday date with playful imagery.</p>
+          <div style="margin-top:12px;"><a href="birth-calendar.html" class="riot-btn">View Project</a></div>
+        </div>
+
+        <div class="riot-card">
+          <div style="font-weight:900;">Personal Portfolio</div>
+          <div style="color:var(--muted);font-size:13px;margin-top:6px;">HTML • CSS • Tailwind</div>
+          <p style="margin-top:8px;color:#cbd7e6;">This portfolio page built with Riot-inspired styling and responsive layout.</p>
+          <div style="margin-top:12px;"><a href="#" class="riot-btn">View Project</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:36px;">
+      <h2 style="font-weight:900;">Contact</h2>
+      <p style="color:#cbd7e6;margin-top:8px;">Feel free to reach out for collaboration, academic submissions, or feedback.</p>
+      <div style="margin-top:8px;color:var(--muted);">
+        <div><strong>Email:</strong> Johndalay25@gmail.com</div>
+        <div><strong>Phone:</strong> 0961 061 5582</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+      <div>© <span id="year"></span> JOHN BENIVIC D. DALAY</div>
+      <div style="color:var(--muted);">Made with HTML • CSS • JavaScript</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

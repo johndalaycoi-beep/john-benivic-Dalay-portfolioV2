@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>September 2004 - Birth Calendar</title>
+<style>
+    :root{--accent:#ff4655;--bg1:#1c2140;}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0b1226 0%,#091322 100%);color:#e6eef8;padding:20px;}
+    .calendar-container{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.02));border-radius:14px;padding:26px;text-align:center;max-width:480px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 14px 40px rgba(2,6,12,0.7);}
+    .month-year{font-size:24px;font-weight:800;color:var(--accent);margin-bottom:10px;}
+    .days-header{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-bottom:10px;font-weight:700;text-transform:uppercase;font-size:11px;color:#9aa6b2;}
+    .days-header div{background:rgba(255,255,255,0.02);padding:8px;border-radius:6px;}
+    .calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;background:transparent;padding:8px;border-radius:10px;}
+    .day-cell{background:rgba(255,255,255,0.02);height:60px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;border-radius:8px;position:relative;color:#dbe8ff;}
+    .day-cell.empty{background:transparent;color:rgba(255,255,255,0.16);font-weight:600;}
+    .day-cell.birthday{background:linear-gradient(180deg,#ffead6,#ffd9c0);color:#081122;border:2px solid rgba(255,70,85,0.18);background-image:url('https://cataas.com/cat?width=120&height=120');background-size:cover;background-position:center;}
+    .day-number{z-index:1;position:relative;}
+    .footer-note{margin-top:12px;font-size:13px;color:#9aa6b2;}
+    @media (max-width:520px){ .calendar-container{padding:18px;} .day-cell{height:48px;} }
+</style>
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="month-year">September 2004</div>
+        <div class="days-header">
+            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+        <div class="calendar-grid">
+            <div class="day-cell empty"></div><div class="day-cell empty"></div><div class="day-cell empty"></div>
+            <div class="day-cell"><span class="day-number">1</span></div><div class="day-cell"><span class="day-number">2</span></div><div class="day-cell"><span class="day-number">3</span></div><div class="day-cell"><span class="day-number">4</span></div>
+            <div class="day-cell"><span class="day-number">5</span></div><div class="day-cell"><span class="day-number">6</span></div><div class="day-cell"><span class="day-number">7</span></div><div class="day-cell"><span class="day-number">8</span></div><div class="day-cell"><span class="day-number">9</span></div><div class="day-cell"><span class="day-number">10</span></div><div class="day-cell"><span class="day-number">11</span></div>
+            <div class="day-cell"><span class="day-number">12</span></div><div class="day-cell"><span class="day-number">13</span></div><div class="day-cell"><span class="day-number">14</span></div><div class="day-cell"><span class="day-number">15</span></div><div class="day-cell"><span class="day-number">16</span></div><div class="day-cell"><span class="day-number">17</span></div><div class="day-cell"><span class="day-number">18</span></div>
+            <div class="day-cell"><span class="day-number">19</span></div><div class="day-cell"><span class="day-number">20</span></div><div class="day-cell"><span class="day-number">21</span></div><div class="day-cell"><span class="day-number">22</span></div><div class="day-cell"><span class="day-number">23</span></div><div class="day-cell"><span class="day-number">24</span></div>
+            <div class="day-cell birthday"><span class="day-number">25</span></div>
+            <div class="day-cell"><span class="day-number">26</span></div><div class="day-cell"><span class="day-number">27</span></div><div class="day-cell"><span class="day-number">28</span></div><div class="day-cell"><span class="day-number">29</span></div><div class="day-cell"><span class="day-number">30</span></div>
+        </div>
+        <div class="footer-note">My birthdate: September 25, 2004 — highlighted with a playful image.</div>
+    </div>
+</body>
+</html>
